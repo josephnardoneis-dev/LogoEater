@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicorn Logo Eater</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="scene">
+            <!-- Unicorn SVG -->
+            <div class="unicorn">
+                <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Unicorn body -->
+                    <ellipse cx="150" cy="120" rx="60" ry="40" fill="#ffc0cb" stroke="#000" stroke-width="2"/>
+                    
+                    <!-- Unicorn head -->
+                    <ellipse cx="90" cy="80" rx="35" ry="30" fill="#ffc0cb" stroke="#000" stroke-width="2"/>
+                    
+                    <!-- Horn -->
+                    <polygon points="75,50 85,50 80,20" fill="#ffd700" stroke="#000" stroke-width="2"/>
+                    <line x1="77" y1="45" x2="77" y2="25" stroke="#ff69b4" stroke-width="1"/>
+                    <line x1="80" y1="40" x2="80" y2="30" stroke="#ff69b4" stroke-width="1"/>
+                    <line x1="83" y1="45" x2="83" y2="25" stroke="#ff69b4" stroke-width="1"/>
+                    
+                    <!-- Eyes -->
+                    <circle cx="75" cy="75" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+                    <circle cx="75" cy="75" r="4" fill="#000"/>
+                    <circle cx="105" cy="75" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+                    <circle cx="105" cy="75" r="4" fill="#000"/>
+                    
+                    <!-- Mouth -->
+                    <path class="mouth" d="M 70 90 Q 90 100 110 90" stroke="#000" stroke-width="2" fill="none"/>
+                    
+                    <!-- Mane -->
+                    <path d="M 60 60 Q 40 40 60 30 Q 50 20 70 25 Q 65 15 80 20" fill="#ff69b4" stroke="#000" stroke-width="1"/>
+                    <path d="M 100 60 Q 120 40 100 30 Q 110 20 90 25 Q 95 15 80 20" fill="#9370db" stroke="#000" stroke-width="1"/>
+                    
+                    <!-- Legs -->
+                    <rect x="120" y="150" width="10" height="30" fill="#ffc0cb" stroke="#000" stroke-width="2"/>
+                    <rect x="140" y="150" width="10" height="30" fill="#ffc0cb" stroke="#000" stroke-width="2"/>
+                    <rect x="160" y="150" width="10" height="30" fill="#ffc0cb" stroke="#000" stroke-width="2"/>
+                    <rect x="180" y="150" width="10" height="30" fill="#ffc0cb" stroke="#000" stroke-width="2"/>
+                    
+                    <!-- Hooves -->
+                    <ellipse cx="125" cy="185" rx="8" ry="5" fill="#000"/>
+                    <ellipse cx="145" cy="185" rx="8" ry="5" fill="#000"/>
+                    <ellipse cx="165" cy="185" rx="8" ry="5" fill="#000"/>
+                    <ellipse cx="185" cy="185" rx="8" ry="5" fill="#000"/>
+                    
+                    <!-- Tail -->
+                    <path d="M 210 120 Q 240 100 230 140 Q 250 130 240 160" fill="#ff69b4" stroke="#000" stroke-width="2"/>
+                </svg>
+            </div>
+            
+            <!-- OddsShopper Logo -->
+            <div class="logo oddsshopper-logo">
+                <div class="logo-text" style="background: #1e73be; color: white; padding: 10px 20px; border-radius: 8px; font-weight: bold; font-family: 'Instrument Sans', sans-serif;">
+                    OddsShopper
+                </div>
+            </div>
+            
+            <!-- Stokastic Logo -->
+            <div class="logo stokastic-logo">
+                <div class="logo-text" style="background: linear-gradient(45deg, #102442, #015ace); color: white; padding: 10px 20px; border-radius: 8px; font-weight: bold; font-family: 'Oswald', sans-serif;">
+                    Stokastic
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
