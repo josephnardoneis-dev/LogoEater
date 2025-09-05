@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&family=Oswald:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #87ceeb 0%, #98fb98 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.unicorn {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 200px;
+    z-index: 10;
+    animation: unicornBounce 3s ease-in-out infinite;
+}
+
+.unicorn svg {
+    width: 100%;
+    height: 100%;
+}
+
+.mouth {
+    animation: mouthMove 0.5s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+.logo {
+    position: absolute;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 5;
+}
+
+.oddsshopper-logo {
+    top: 30%;
+    right: 20%;
+    animation: logoFloat 4s ease-in-out infinite, logoMove1 8s linear infinite;
+}
+
+.stokastic-logo {
+    bottom: 30%;
+    right: 15%;
+    animation: logoFloat 4s ease-in-out infinite 1s, logoMove2 10s linear infinite;
+}
+
+.logo-text {
+    font-size: 24px;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo-text:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes unicornBounce {
+    0%, 100% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-60%) rotate(2deg);
+    }
+}
+
+@keyframes mouthMove {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2) translateY(-2px);
+    }
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+@keyframes logoMove1 {
+    0% {
+        right: 20%;
+        top: 30%;
+    }
+    25% {
+        right: 40%;
+        top: 20%;
+    }
+    50% {
+        right: 35%;
+        top: 50%;
+    }
+    75% {
+        right: 25%;
+        top: 60%;
+    }
+    100% {
+        right: 20%;
+        top: 30%;
+    }
+}
+
+@keyframes logoMove2 {
+    0% {
+        right: 15%;
+        bottom: 30%;
+    }
+    25% {
+        right: 45%;
+        bottom: 40%;
+    }
+    50% {
+        right: 40%;
+        bottom: 20%;
+    }
+    75% {
+        right: 20%;
+        bottom: 45%;
+    }
+    100% {
+        right: 15%;
+        bottom: 30%;
+    }
+}
+
+/* Eating animation */
+.eating {
+    animation: eatLogo 2s ease-in-out;
+}
+
+@keyframes eatLogo {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.8) rotate(180deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Chomping mouth animation */
+.chomping .mouth {
+    animation: chomp 0.2s ease-in-out 5;
+}
+
+@keyframes chomp {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5) translateY(-5px);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .unicorn {
+        left: 10%;
+        width: 250px;
+        height: 170px;
+    }
+    
+    .logo-text {
+        font-size: 18px;
+    }
+    
+    .oddsshopper-logo {
+        right: 10%;
+    }
+    
+    .stokastic-logo {
+        right: 5%;
+    }
+}
